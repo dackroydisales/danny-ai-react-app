@@ -2,9 +2,9 @@
 
 ## By Daniel Ackroyd-Isales
 
-This app fetches the data 8 people upon page load, and lists their full names, email addresses, phone numbers, and websites.
+This app fetches the data of 8 fictional people upon page load, and lists their full names, email addresses, phone numbers, and websites.
 
-It also allows the user to set the number of people to fetch from 1 to 100, and allows the user to perform a new data fetch for that number of people via button click.
+It also allows the user to set the number of people to fetch, from 1 to 100, and allows the user to perform a new fetch for that number of people upon button click.
 
 Getting the data to load initially, and thereafter from a button click, took a little bit of extra time. The issue was/is double mounting on dev causing mountedRef to be marked as false without data being loaded, and this causing the data from the second mount to not be displayed. The bugfix was to set mountedRef to true as part of the useEffect that triggers the initial load. 
 
